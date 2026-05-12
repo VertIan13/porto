@@ -1,0 +1,423 @@
+:root {
+    /* Warna untuk Dark Mode */
+    --main-bg: #0d121c; /* Latar belakang sangat gelap, bukan hitam murni */
+    --main-text: #f0f0f0; /* Teks terang */
+    --accent-color: #00bcd4; /* Biru Neon untuk judul dan border */
+    --secondary-text: #b0b0b0; /* Teks sekunder */
+    --card-bg: #1a202c; /* Latar belakang kartu/elemen */
+    --shadow-neon: 0 0 10px rgba(0, 188, 212, 0.6), 0 0 20px rgba(0, 188, 212, 0.4); /* Efek neon */
+    
+    /* Tambahkan font jika Anda ingin font yang berbeda */
+    font-family: 'Poppins', sans-serif; /* Ganti dengan font yang Anda suka */
+}
+
+.navbar a {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 35px;
+    transition: 1s;
+  }
+ 
+  .navbar a:hover,
+  .navbar a.active {
+   color: #00abf0;
+  }
+
+
+/* Terapkan ke Body */
+body {
+    background: var(--main-bg);
+    color: var(--main-text);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Styling Navbar (Hanya Contoh) */
+.navbar a {
+    color: var(--secondary-text); /* Link navigasi */
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Layout Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-around; /* Jaga jarak antara konten dan gambar */
+    align-items: center;
+    min-height: 80vh; /* Tinggi minimum */
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    color: var(--accent-color);
+    font-size: 3.5em; /* Ukuran font yang lebih besar */
+    /* Tambahkan efek shadow pada judul untuk meniru gaya neon */
+    text-shadow: 0 0 5px rgba(0, 188, 212, 0.5); 
+    line-height: 1.2;
+}
+
+.hero-content h2 {
+    color: var(--main-text);
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+/* Gaya Avatar dan Neon Ring */
+
+:root {
+    /* Pastikan variabel aksen (neon color) sudah didefinisikan */
+    --accent-color: #00bcd4; /* Biru Neon */
+    /* Definisikan variabel untuk efek shadow */
+    --shadow-neon: 
+        0 0 5px var(--accent-color), /* Cahaya dalam yang lembut */
+        0 0 15px var(--accent-color), /* Cahaya sedang */
+        0 0 30px rgba(0, 188, 212, 0.7); /* Cahaya luar yang kuat */
+}
+
+
+.hero-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.neon-ring {
+    /* Membuat bentuk lingkaran */
+    border-radius: 50%;
+    
+    /* Border untuk memberikan batas fisik cincin */
+    border: 3px solid var(--accent-color);
+    
+    /* Menerapkan efek glow neon */
+    box-shadow: var(--shadow-neon);
+    
+    padding: 15px; /* Memberi ruang antara border neon dan gambar di dalamnya */
+    
+    /* Agar transisi terlihat halus saat berganti tema (jika Anda memiliki dua set warna neon) */
+    transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+/* 3. Gambar Avatar di Dalam Cincin */
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Penting: agar gambar juga berbentuk lingkaran */
+    display: block;
+}
+
+
+.services-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: var(--accent-color);
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+/* Menggunakan CSS Grid untuk layout 3 kolom */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tiga kolom dengan lebar sama */
+    gap: 30px; /* Jarak antar kartu */
+}
+
+/* Gaya Kartu Layanan */
+.service-card {
+    background-color: var(--card-bg); /* Warna latar belakang kartu gelap */
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--card-bg); /* Border halus */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Efek angkat saat hover */
+    /* Beri sedikit efek glow neon saat di-hover */
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4); 
+}
+
+.card-icon i {
+    font-size: 2.5em;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--secondary-text);
+    margin-bottom: 25px;
+    line-height: 1.6;
+    text-align: left;
+    height: 120px; /* Tentukan tinggi agar kartu seragam */
+}
+
+/* style.css */
+
+.skills-section {
+    padding: 80px 5%;
+}
+
+.skills-section h2 {
+    text-align: center;
+    color: var(--accent-color);
+    margin-bottom: 50px;
+    font-size: 2.5em;
+}
+
+/* 1. LAYOUT UTAMA: Flexbox untuk 2 Kolom */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    align-items: stretch; /* Penting: Pastikan kedua kolom memiliki tinggi yang sama */
+}
+
+.skills-column {
+    flex: 1; /* Masing-masing kolom mengambil bagian yang sama dari ruang yang tersedia */
+    padding: 30px; 
+    background-color: var(--card-bg); 
+    border-radius: 10px;
+}
+
+.skills-column h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+
+/* 2. TECHNICAL SKILLS (Progress Bar) */
+.skill-item {
+    margin-bottom: 30px; 
+}
+
+/* Menjaga Nama Skill dan Persentase sejajar */
+.skill-info {
+    display: flex;
+    justify-content: space-between; /* Untuk memisahkan Nama Skill (kiri) dan Persentase (kanan) */
+    align-items: center;
+    margin-bottom: 8px; 
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Mengatur ikon dan nama skill di sisi kiri */
+.skill-info span:first-of-type {
+    display: flex; 
+    align-items: center;
+    color: var(--main-text); 
+}
+
+/* Gaya Ikon */
+.skill-info i {
+    font-size: 1.4em;
+    margin-right: 12px;
+    width: 25px; /* Tetapkan lebar untuk keseragaman posisi */
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #333; 
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: var(--accent-color); 
+    transition: width 1s ease-in-out; 
+}
+
+
+/* 3. PROFESSIONAL SKILLS (Diagram Lingkaran) */
+.professional-skills {
+    /* Gunakan Flexbox untuk mengatur konten di tengah kolom */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.circle-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 40px; 
+    margin-top: 20px;
+}
+
+/* (Sertakan kembali semua kode .outer-circle, .inner-circle, .skill-percent dari jawaban sebelumnya di sini) */
+/* Contoh Outer Circle (PENTING untuk conic-gradient) */
+.outer-circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* Background akan diatur oleh JavaScript */
+    background: #333; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-neon); /* Tambahkan efek neon halus */
+}
+
+
+/* 4. MEDIA QUERY untuk Responsif */
+@media (max-width: 992px) {
+    .skills-container {
+        flex-direction: column; 
+        gap: 30px;
+    }
+}
+
+
+
+.contact-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: var(--accent-color);
+    color: var(--main-bg); /* Teks gelap di latar belakang neon */
+}
+
+/* Media Query untuk Responsif (di layar kecil) */
+@media (max-width: 768px) {
+    .service-container {
+        grid-template-columns: 1fr; /* Jadi satu kolom di layar kecil */
+    }
+    .service-card p {
+        height: auto; /* Hilangkan batas tinggi */
+    }
+}
+
+
+
+.services-section {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.services-section h2 {
+    color: var(--primary-color);
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .hero-image-container {
+    box-shadow: 0 0 10px var(--primary-color), 0 0 40px var(--primary-color);
+    border-radius: 50%;
+}
+
+.social-links {
+    border: #00bcd4;
+    border-radius: 5px;
+}
+
+/* ganti tema*/
+
+/* style.css */
+
+/* Warna Default (Kita jadikan Light Mode sebagai default/fallback) */
+:root {
+    --bg-color: #ffffff;      /* Latar belakang: Putih */
+    --main-text: #1f2937;     /* Teks utama: Hitam keabu-abuan */
+    --accent-color: #3b82f6;  /* Aksen: Biru standar */
+    --card-bg: #f9fafb;       /* Latar belakang kartu: Putih keabu-abuan */
+    --secondary-text: #6b7280;
+    --shadow-neon: none; /* Hilangkan neon di light mode */
+    transition: all 0.5s ease; /* Transisi untuk transisi warna yang halus */
+}
+
+/* TEMA GELAP (DARK MODE) */
+[data-theme="dark"] {
+    --bg-color: #0d121c;      /* Latar belakang: Gelap */
+    --main-text: #f0f0f0;     /* Teks utama: Putih */
+    --accent-color: #00bcd4;  /* Aksen: Biru Neon */
+    --card-bg: #1a202c;       /* Latar belakang kartu: Gelap */
+    --secondary-text: #b0b0b0;
+    /* Redefinisi shadow neon */
+    --shadow-neon: 0 0 5px var(--accent-color), 0 0 15px var(--accent-color), 0 0 30px rgba(0, 188, 212, 0.7);
+}
+
+/* Terapkan variabel ke elemen tubuh */
+body {
+    background: var(--bg-color);
+    color: var(--main-text);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Pastikan elemen lain (seperti kartu) juga mengikuti */
+.service-card, .skills-column {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-bg); /* Sesuaikan border agar tidak terlalu kontras di light mode */
+    transition: background-color 0.5s;
+}
+
+/* style.css */
+
+/* Warna Default (Kita jadikan Light Mode sebagai default/fallback) */
+:root {
+    --bg-color: #2c78a1;      /* Latar belakang: Putih */
+    --main-text: #252e3b;     /* Teks utama: Hitam keabu-abuan */
+    --accent-color: #3b82f6;  /* Aksen: Biru standar */
+    --card-bg: #f9fafb;       /* Latar belakang kartu: Putih keabu-abuan */
+    --secondary-text: #6b7280;
+    --shadow-neon: none; /* Hilangkan neon di light mode */
+    transition: all 0.5s ease; /* Transisi untuk transisi warna yang halus */
+}
+
+/* TEMA GELAP (DARK MODE) */
+[data-theme="dark"] {
+    --bg-color: #0d121c;      /* Latar belakang: Gelap */
+    --main-text: #284b8b;     /* Teks utama: Putih */
+    --accent-color: #00bcd4;  /* Aksen: Biru Neon */
+    --card-bg: #1a202c;       /* Latar belakang kartu: Gelap */
+    --secondary-text: #b0b0b0;
+    /* Redefinisi shadow neon */
+    --shadow-neon: 0 0 5px var(--accent-color), 0 0 15px var(--accent-color), 0 0 30px rgba(0, 188, 212, 0.7);
+}
+
+/* Terapkan variabel ke elemen tubuh */
+body {
+    background: var(--bg-color);
+    color: var(--main-text);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+/* Pastikan elemen lain (seperti kartu) juga mengikuti */
+.service-card, .skills-column {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-bg); /* Sesuaikan border agar tidak terlalu kontras di light mode */
+    transition: background-color 0.5s;
+}

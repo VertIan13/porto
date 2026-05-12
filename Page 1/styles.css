@@ -1,0 +1,134 @@
+
+/* Gaya Dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Latar belakang gelap */
+    color: #fff; /* Teks putih */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #1a1a1a;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1.logo {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+header .search-icon {
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Hero Banner */
+.hero-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Judul Galeri */
+.gallery-intro {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.gallery-intro .subtitle {
+    font-size: 0.9rem;
+    color: #ffc107; /* Warna kuning emas */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.gallery-intro .section-title {
+    font-size: 2rem;
+    color: #ffc107; /* Warna kuning emas */
+    margin: 0;
+}
+
+/* Galeri */
+.gallery .row {
+    display: flex;
+    gap: 15px; /* Jarak antar foto */
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Tata letak untuk jumlah foto yang berbeda */
+.row-2 img {
+    flex: 1 1 calc(50% - 15px);
+}
+
+.row-3 img {
+    flex: 1 1 calc(33.33% - 15px);
+}
+
+.row-4 img {
+    flex: 1 1 calc(25% - 15px);
+}
+
+/* Deskripsi Galeri */
+.gallery-description {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Contoh efek warna hijau */
+.green-effect img {
+    filter: sepia(1) hue-rotate(90deg) saturate(1.5);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+footer a.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Warna kuning emas */
+    color: #121212;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+footer a.cta-button:hover {
+    background-color: #e0a800;
+}
